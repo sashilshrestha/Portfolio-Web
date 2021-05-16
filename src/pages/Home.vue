@@ -36,9 +36,21 @@
                             class="social-icons"
                             uk-scrollspy="cls: uk-animation-fade; delay: 300; repeat: true ; target: a"
                         >
-                            <a href="" uk-icon="icon: instagram"></a>
-                            <a href="" uk-icon="icon: linkedin"></a>
-                            <a href="" uk-icon="icon: github"></a>
+                            <a
+                                href="https://www.instagram.com/sashilstha/"
+                                target="_blank"
+                                uk-icon="icon: instagram"
+                            ></a>
+                            <a
+                                href="https://www.linkedin.com/in/sashilshrestha/"
+                                uk-icon="icon: linkedin"
+                                target="_blank"
+                            ></a>
+                            <a
+                                href="https://github.com/sashilshrestha"
+                                uk-icon="icon: github"
+                                target="_blank"
+                            ></a>
                         </div>
                     </div>
                 </div>
