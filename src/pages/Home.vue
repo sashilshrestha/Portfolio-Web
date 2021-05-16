@@ -96,6 +96,7 @@ export default {
             align-items: center;
             padding: 0 0 0 2.375rem;
             position: relative;
+            z-index: 2;
 
             .my-info {
                 margin-bottom: 8rem;
@@ -204,6 +205,7 @@ export default {
             }
 
             .right-side {
+                padding: 0 0 0 0 !important;
                 .my-info {
                     padding: 5rem 0 0 0;
                     h5 {
