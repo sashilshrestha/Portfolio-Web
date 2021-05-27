@@ -1,18 +1,29 @@
 <template>
     <div id="particle-js"></div>
-    <Home />
+    <vue3-progress />
+    <router-view />
 </template>
 
 <script>
 import 'particles.js';
-import Home from './pages/Home';
 
 export default {
     name: 'App',
-    components: {
-        Home,
+    components: {},
+    created() {
+        this.$progress.start();
+
+        this.$router.beforeEach((to, from, next) => {
+            this.$progress.start();
+            next();
+        });
+
+        this.$router.afterEach((to, from) => {
+            this.$progress.finish();
+        });
     },
     mounted() {
+        this.$progress.finish();
         this.initParticles();
     },
     methods: {
@@ -164,5 +175,15 @@ html {
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+.vue3-progress {
+    background: rgb(4, 71, 126) !important;
+    background: linear-gradient(
+        90deg,
+        #205cfb 0%,
+        rgba(2, 137, 250, 1) 100%
+    ) !important;
+    box-shadow: 0px 1px 4px 3px #0289fa5c;
+    -webkit-box-shadow: 0px 1px 4px 3px #0289fa5c;
 }
 </style>
